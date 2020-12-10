@@ -24,14 +24,15 @@ public class ContatoModel {
 	private String nome;
 
 	//CONTRUCTORS
-	public ContatoModel(Long id, @NotEmpty(message = "O DDD deve ser preenchido") String ddd,
-			@NotEmpty(message = "O Telefone deve ser preenchido") String telefone,
-			@NotEmpty(message = "O Nome deve ser preenchido") String nome) {
-		this.id = id;
+	public ContatoModel(){
+	}
+	
+	public ContatoModel(String nome, String ddd, String telefone) {
+		this.nome = nome;
 		this.ddd = ddd;
 		this.telefone = telefone;
-		this.nome = nome;
 	}
+	
 	//GETTERS AND SETTERS
 	public Long getId() {
 		return id;
